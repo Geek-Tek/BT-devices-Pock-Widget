@@ -3,7 +3,7 @@ See your connected bluetooth devices right on your TouchBar with this Pock Widge
 ![Image from the TouchBar of BT devices widget](TouchBar.png)
 ![Devices icons](Icons.png)
 
-> [!NOTE]:
+> [!NOTE]
 > I have never worked with swift before. This is my first (and *probably* last) swift project.
 >
 > With very few Pock extension to take inspiration from and the PockKit documentation not completed, I hope you'll forgive me for the super bad code (it's mostly copy and paste from other Pock extensions). My low knowledge on swift and MacOS development led me to work on this project only in my free time, but after few weeks of development, I encountered some obstacles I knew would take me too long to overcome.
