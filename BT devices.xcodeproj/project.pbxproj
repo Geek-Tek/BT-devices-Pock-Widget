@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D96EF445A46F4B9D22B0E96 /* Pods_BT_devices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F80CEF50B5B758E511E2E3 /* Pods_BT_devices.framework */; };
+		28051DD92ADC4FA400B6FBD4 /* btDevicesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051DD82ADC4FA400B6FBD4 /* btDevicesWidget.swift */; };
+		28051DE32ADC4FE200B6FBD4 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 28051DE22ADC4FE200B6FBD4 /* PockKit */; };
+		2815D9652AE302D600CE9FCF /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D9642AE302D600CE9FCF /* cross.png */; };
+		2815D9692AE996C700CE9FCF /* BTconnection.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D9682AE996C700CE9FCF /* BTconnection.png */; };
+		281ABE062CA1A9E800B34D5D /* magic_mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 281ABE052CA1A9E800B34D5D /* magic_mouse.png */; };
+		286F3C042BC426130039C081 /* btDevicesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F3C032BC426130039C081 /* btDevicesItem.swift */; };
+		28EB3DE42B85365C00932ADB /* Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EB3DE32B85365C00932ADB /* Keyboard.png */; };
+		28FDBF962AF144B200F5C1A1 /* AirPro.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FDBF952AF144B200F5C1A1 /* AirPro.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		028771A53FB1E9EDC380D207 /* Pods-BT devices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BT devices.release.xcconfig"; path = "Target Support Files/Pods-BT devices/Pods-BT devices.release.xcconfig"; sourceTree = "<group>"; };
+		28051DD42ADC4FA400B6FBD4 /* BT devices.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BT devices.pock"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28051DD82ADC4FA400B6FBD4 /* btDevicesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btDevicesWidget.swift; sourceTree = "<group>"; };
+		28051DDA2ADC4FA400B6FBD4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		28051DDB2ADC4FA400B6FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2815D9642AE302D600CE9FCF /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		2815D9682AE996C700CE9FCF /* BTconnection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTconnection.png; sourceTree = "<group>"; };
+		281ABE052CA1A9E800B34D5D /* magic_mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic_mouse.png; sourceTree = "<group>"; };
+		286F3C032BC426130039C081 /* btDevicesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btDevicesItem.swift; sourceTree = "<group>"; };
+		28EB3DE32B85365C00932ADB /* Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Keyboard.png; sourceTree = "<group>"; };
+		28FDBF952AF144B200F5C1A1 /* AirPro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPro.png; sourceTree = "<group>"; };
+		88F80CEF50B5B758E511E2E3 /* Pods_BT_devices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BT_devices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF055EAED793B8BF03DDD8F4 /* Pods-BT devices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BT devices.debug.xcconfig"; path = "Target Support Files/Pods-BT devices/Pods-BT devices.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28051DD02ADC4FA400B6FBD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28051DE32ADC4FE200B6FBD4 /* PockKit in Frameworks */,
+				1D96EF445A46F4B9D22B0E96 /* Pods_BT_devices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18361656363D6EE75E4154B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF055EAED793B8BF03DDD8F4 /* Pods-BT devices.debug.xcconfig */,
+				028771A53FB1E9EDC380D207 /* Pods-BT devices.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		28051DCA2ADC4FA300B6FBD4 = {
+			isa = PBXGroup;
+			children = (
+				28051DD62ADC4FA400B6FBD4 /* BT devices */,
+				28051DD52ADC4FA400B6FBD4 /* Products */,
+				18361656363D6EE75E4154B6 /* Pods */,
+				2EE39768EB7C743A5E382BDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		28051DD52ADC4FA400B6FBD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28051DD42ADC4FA400B6FBD4 /* BT devices.pock */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28051DD62ADC4FA400B6FBD4 /* BT devices */ = {
+			isa = PBXGroup;
+			children = (
+				28051DDA2ADC4FA400B6FBD4 /* Podfile */,
+				28051DDB2ADC4FA400B6FBD4 /* Info.plist */,
+				28051DD72ADC4FA400B6FBD4 /* Sources */,
+			);
+			path = "BT devices";
+			sourceTree = "<group>";
+		};
+		28051DD72ADC4FA400B6FBD4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2815D9612AE2FF9C00CE9FCF /* PNGs */,
+				28051DD82ADC4FA400B6FBD4 /* btDevicesWidget.swift */,
+				286F3C032BC426130039C081 /* btDevicesItem.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2815D9612AE2FF9C00CE9FCF /* PNGs */ = {
+			isa = PBXGroup;
+			children = (
+				281ABE052CA1A9E800B34D5D /* magic_mouse.png */,
+				2815D9682AE996C700CE9FCF /* BTconnection.png */,
+				2815D9642AE302D600CE9FCF /* cross.png */,
+				28FDBF952AF144B200F5C1A1 /* AirPro.png */,
+				28EB3DE32B85365C00932ADB /* Keyboard.png */,
+			);
+			path = PNGs;
+			sourceTree = "<group>";
+		};
+		2EE39768EB7C743A5E382BDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88F80CEF50B5B758E511E2E3 /* Pods_BT_devices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28051DD32ADC4FA400B6FBD4 /* BT devices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28051DDE2ADC4FA400B6FBD4 /* Build configuration list for PBXNativeTarget "BT devices" */;
+			buildPhases = (
+				0B84BA7DE4CC86E136EB1A2E /* [CP] Check Pods Manifest.lock */,
+				28051DCF2ADC4FA400B6FBD4 /* Sources */,
+				28051DD02ADC4FA400B6FBD4 /* Frameworks */,
+				28051DD12ADC4FA400B6FBD4 /* Resources */,
+				28051DD22ADC4FA400B6FBD4 /* [PK] Install widget */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BT devices";
+			packageProductDependencies = (
+				28051DE22ADC4FE200B6FBD4 /* PockKit */,
+			);
+			productName = "BT devices";
+			productReference = 28051DD42ADC4FA400B6FBD4 /* BT devices.pock */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28051DCB2ADC4FA300B6FBD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					28051DD32ADC4FA400B6FBD4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 28051DCE2ADC4FA300B6FBD4 /* Build configuration list for PBXProject "BT devices" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28051DCA2ADC4FA300B6FBD4;
+			packageReferences = (
+				28051DE12ADC4FE200B6FBD4 /* XCRemoteSwiftPackageReference "pockkit" */,
+			);
+			productRefGroup = 28051DD52ADC4FA400B6FBD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28051DD32ADC4FA400B6FBD4 /* BT devices */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28051DD12ADC4FA400B6FBD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281ABE062CA1A9E800B34D5D /* magic_mouse.png in Resources */,
+				2815D9652AE302D600CE9FCF /* cross.png in Resources */,
+				28EB3DE42B85365C00932ADB /* Keyboard.png in Resources */,
+				28FDBF962AF144B200F5C1A1 /* AirPro.png in Resources */,
+				2815D9692AE996C700CE9FCF /* BTconnection.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B84BA7DE4CC86E136EB1A2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BT devices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28051DD22ADC4FA400B6FBD4 /* [PK] Install widget */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[PK] Install widget";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28051DCF2ADC4FA400B6FBD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286F3C042BC426130039C081 /* btDevicesItem.swift in Sources */,
+				28051DD92ADC4FA400B6FBD4 /* btDevicesWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		28051DDC2ADC4FA400B6FBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		28051DDD2ADC4FA400B6FBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		28051DDF2ADC4FA400B6FBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF055EAED793B8BF03DDD8F4 /* Pods-BT devices.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BT devices/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geektek.BT-devices";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pock;
+			};
+			name = Debug;
+		};
+		28051DE02ADC4FA400B6FBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 028771A53FB1E9EDC380D207 /* Pods-BT devices.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BT devices/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geektek.BT-devices";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28051DCE2ADC4FA300B6FBD4 /* Build configuration list for PBXProject "BT devices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28051DDC2ADC4FA400B6FBD4 /* Debug */,
+				28051DDD2ADC4FA400B6FBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28051DDE2ADC4FA400B6FBD4 /* Build configuration list for PBXNativeTarget "BT devices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28051DDF2ADC4FA400B6FBD4 /* Debug */,
+				28051DE02ADC4FA400B6FBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28051DE12ADC4FE200B6FBD4 /* XCRemoteSwiftPackageReference "pockkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pock/pockkit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28051DE22ADC4FE200B6FBD4 /* PockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28051DE12ADC4FE200B6FBD4 /* XCRemoteSwiftPackageReference "pockkit" */;
+			productName = PockKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 28051DCB2ADC4FA300B6FBD4 /* Project object */;
+}
