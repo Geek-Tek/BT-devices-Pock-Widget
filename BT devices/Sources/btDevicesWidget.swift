@@ -11,6 +11,14 @@ import AppKit
 
 import IOBluetooth
 
+enum DeviceType {
+    case headset
+    case keyboard
+    case mouse
+    case generic
+    case none
+}
+
 extension NSImage {
     /// Returns an NSImage snapshot of the passed view in 2x resolution.
     convenience init?(frame: NSRect, view: NSView) {
@@ -33,8 +41,11 @@ class btDevicesWidget: PKWidget {
     private var refreshTimer: Timer?
     
     private var stackView: NSStackView {
-        return view as! NSStackView
+        guard let stack = view as? NSStackView else { fatalError("Expected NSStackView") }
+        return stack
     }
+    
+    private lazy var powerItem = SPowerItem()
     
     private var loadedItems: [btDevicesItem] = []
     
@@ -57,7 +68,10 @@ class btDevicesWidget: PKWidget {
         stackView.spacing = 8
         
         /// Timer: every 10 seconds refresh
-        refreshTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.loadStatusElements), userInfo: nil, repeats: true)
+
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in self?.loadStatusElements()
+        }
+
     }
     
     deinit {
@@ -99,11 +113,16 @@ class btDevicesWidget: PKWidget {
         // add a timer from one change to another in order to listen to single changes and avoid double changes
         iterations = 0
         
-        clearItems()
-        let item = SPowerItem()
-        loadedItems.append(item)
-        stackView.addArrangedSubview(item.view)
+        if loadedItems.isEmpty {
+            loadedItems.append(powerItem)
+            stackView.addArrangedSubview(powerItem.view)
+        }
+//        clearItems()
+//        let item = SPowerItem()
+//        loadedItems.append(item)
+//        stackView.addArrangedSubview(item.view)
         stackView.height(30)
+        powerItem.reload()
     }
     
     @objc private func detectChange() {
@@ -119,11 +138,26 @@ class btDevicesWidget: PKWidget {
 internal class SPowerItem: btDevicesItem {
     
     private let stackView: NSStackView = NSStackView(frame: .zero)
-    private let bodyView: NSView = NSView(frame: NSRect(x: 2, y: 2, width: 1, height: 1))
-    private let imageViews: [NSImageView] = [ NSImageView(frame: NSRect(x:0, y:0, width: 30, height: 30)), NSImageView(frame: NSRect(x:0, y:0, width: 30, height: 30)), NSImageView(frame: NSRect(x:0, y:0, width: 30, height: 30)) ]
+    private let imageViews: [NSImageView] = [
+        NSImageView(),
+        NSImageView(),
+        NSImageView()
+    ]
+
     private var used = 0
-    
+
     init() {
+        imageViews.forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.imageScaling = .scaleProportionallyUpOrDown
+        }
+        
+        for imageView in imageViews {
+            NSLayoutConstraint.activate([
+                imageView.widthAnchor.constraint(equalToConstant: 30),
+                imageView.heightAnchor.constraint(equalToConstant: 30)
+            ])
+        }
         didLoad()
     }
     
@@ -147,33 +181,23 @@ internal class SPowerItem: btDevicesItem {
     private func configureStackView() {
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         stackView.spacing = 8
-        // !
-        // stackView.addArrangedSubview(valueLabel)
         
-        /* for d in devicesLabel {
-            stackView.addArrangedSubview(d)
-        } */
-        /* devicesIcon.append(image)
-        print(devicesIcon)
-        for i in devicesIcon {
-            stackView.addArrangedSubview(i)
-        } */
-        if ( used > 0 ) {
-            for i in 0...used-1 {
-                stackView.addArrangedSubview(imageViews[i])
-            }
-        } else {
-            stackView.addArrangedSubview(imageViews[0])
+        stackView.arrangedSubviews.forEach {
+            stackView.removeArrangedSubview($0)
+            $0.removeFromSuperview()
         }
-        print(used)
+        
+        for i in 0..<max(used, 1) {
+            stackView.addArrangedSubview(imageViews[i])
+        }
     }
     
     @objc func reload() {
         guard let devices = IOBluetoothDevice.pairedDevices() else { return }
 
-        var type: [String] = ["", "", ""]
+        var type: [DeviceType] = Array(repeating: .none, count: 3)
         var n = 0
         for d in devices {
             // print(d)
@@ -184,16 +208,17 @@ internal class SPowerItem: btDevicesItem {
                         // print("\(String(device.addressString))")
                         
                         // Contains Headset service
-                        type[n] = "Connection"
+                        type[n] = .generic
                         for serv in device.services {
-                            if ((serv as! IOBluetoothSDPServiceRecord).getServiceName() == "Headset") {
-                                type[n] = "Headset"
+                            guard let service = serv as? IOBluetoothSDPServiceRecord else { continue }
+                            if (service.getServiceName() == "Headset") {
+                                type[n] = .headset
                                 break
-                            } else if ((serv as! IOBluetoothSDPServiceRecord).getServiceName() == "Broadcom Bluetooth Wireless Keyboard SDP Server") {
-                                type[n] = "Keyboard"
+                            } else if (service.getServiceName() == "Broadcom Bluetooth Wireless Keyboard SDP Server") {
+                                type[n] = .keyboard
                                 break
-                            } else if ((serv as! IOBluetoothSDPServiceRecord).getServiceName() == "Apple Wireless Mouse") {
-                                type[n] = "Mouse"
+                            } else if (service.getServiceName() == "Apple Wireless Mouse") {
+                                type[n] = .mouse
                                 break
                             }
                         }
@@ -203,25 +228,27 @@ internal class SPowerItem: btDevicesItem {
             }
         }
         used = n
-        self.updateIcon(items: n, type: type)
+        updateIcon(items: n, type: type)
+        configureStackView()
     }
     
-    private func updateIcon(items: Int, type: [String]) {
+    private func updateIcon(items: Int, type: [DeviceType]) {
         for i in 0...2 {
             imageViews[i].subviews.forEach({ $0.removeFromSuperview() })
             switch type[i] {
-                case "Headset":
+                case .headset:
                     imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "AirPro.png")
-                case "Keyboard":
+                case .keyboard:
                     imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "Keyboard.png")
-                case "Mouse":
+                case .mouse:
                     imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "magic_mouse.png")
-                case "Connection":
+                case .generic:
                     imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "BTconnection.png")
                 default:
-                if ( items == 0 ) {
+                    if ( items == 0 ) {
+                        imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "cross.png")
                     // if ( Preferences[.shouldShowX] ) {
-                        // imageViews[i].image = Bundle(for: btDevicesWidget.self).image(forResource: "cross.png")
+
                     // } else {
                         // imageViews[i].image = nil
                     // }

@@ -31,16 +31,16 @@ I have some ideas I'd like to implement in this widget:
     * Changing icon for earbuds from a certain selection, in order to be more similar to the actual ones used by the user.
     * Max number of elements shown in TouchBar
     * Ignore some devices
-    * Show an X when no devices are connected: bool, default should be ```false```
+    * Show an X when no devices are connected: bool, default should be ```true``` (helps placing the widget in the touchbar)
     
 
 ## Contributions
 I will not change the MIT licence choosed for PockKit, therefore you are free to use, clone, fork and change deliberately this widget based on your personal preference. I know I'm not able to improve this project further with my current knowledge, but if you are willing to help me, it would be very appreciated.
 
 
-Some things i left in the code to simplify logging and device readings are a ```print(devices)``` and a ```print("\(String(device.addressString))")``` in a for-loop. Also, almost everything about the code main structure is copied from the [Pock Status Widget](https://github.com/pock/status-widget), but it's what you get when you're trying to develop a widget wihtout the proper documentation and knowledge. I've also found [some problems installing some third-party widgets](https://github.com/MXCR-cpu/oil/issues/2), so if you have any problems setting mine up, I'll try to help you with my very limited knowledge.
+Some comments I left out in the code to simplify logging and reading devices are a ```print(devices)``` and a ```print("\(String(device.addressString))")``` in a for-loop. Also, almost everything about the code main structure is copied from the [Pock Status Widget](https://github.com/pock/status-widget), but it's what you get when you're trying to develop a widget wihtout the proper documentation and knowledge. I've also found [some problems installing some third-party widgets](https://github.com/MXCR-cpu/oil/issues/2), so if you have any problems setting mine up, I'll try to help you with my very limited knowledge.
 
 ## Final Thanks
 So so many thanks to [Pierluigi Galdi](https://github.com/pigigaldi). Your app is a true revolution in terms of touchbar utilization. It seemed like Apple forgot to develop pretty much anything for it. I think the touchbar had so much potential, and Pock truly shows that.
 
-Out of gratitude, and also because someone may be searching this, I'll drop this little informations here: I've searched Pock extensions to see how much potential this project could open to. Apart from the defaults Pock widgets that you can find in the [Pock's GitHub page](https://github.com/pock), I've found a [piano widget](https://github.com/p-x9/pock-piano-widget) that produce sounds, [Quit-Pock](https://github.com/kylegorter/Quit-Pock), a widget to close the active running application, and [Oil](https://github.com/MXCR-cpu/oil), a widget to see system resources usage. I'm sure someone could find this projects useful and inspiring as I have.
+Out of gratitude, and also because someone may be searching this, I'll drop this little informations here: I've searched Pock extensions to see how much potential this project could open to. Apart from the defaults Pock widgets that you can find in the [Pock's GitHub page](https://github.com/pock), I've found a [piano widget](https://github.com/p-x9/pock-piano-widget) that produce sounds, [Quit-Pock](https://github.com/kylegorter/Quit-Pock), a widget to close the active running application, and [Oil](https://github.com/MXCR-cpu/oil), a widget to see system resources usage. I'm sure someone could find these projects useful and inspiring as I have.
